@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+html, body {
+  margin: 0;
+  background-color: #ffc600;
+  font-family: 'Amatic SC', cursive;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.text-center {
+  text-align: center;
+}
+
+.flex { display: flex }
+.flex.space-between { justify-content: space-between }
+
+.flex-1 { flex: 1 }
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+h1 {
+  font-size: 102px;
+}
+
+.hole {
+  position: relative;
+  overflow: hidden;
+  height: 276px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 30px;
+}
+.hole .dirt {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+}
+.hole .mole {
+  position: absolute;
+  left: calc(100% / 2 - 95px);
+  bottom: -100%;
+  transition: bottom .3s;
+}
+.hole .mole.shown {
+  bottom: 0;
+}
+
+button {
+  display: block;
+  border: none;
+  margin: 5em auto 0;
+  padding: 18px;
+  border-radius: 6px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 32px;
+  background: #222;
+  color: #ffc600;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  transform: scale(1);
+  transition: transform .3s;
+}
+button:hover {
+  background: #000;
+  transform: scale(1.2);
+  cursor: pointer;
+}
